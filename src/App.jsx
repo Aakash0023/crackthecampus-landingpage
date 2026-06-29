@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
-import Features from "./components/Features/Features";
+import Showcase from "./components/Showcase/Showcase";
 import Stats from "./components/Stats/Stats";
 import PlatformPreview from "./components/PlatformPreview/PlatformPreview";
 import Courses from "./components/Courses/Courses";
@@ -12,7 +12,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <Features />
+      <Showcase />
       <PlatformPreview />
       <Stats />
 
