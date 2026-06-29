@@ -12,9 +12,11 @@ function Hero() {
           <span className="hero-badge">AI Powered Placement Platform</span>
 
           <h1 className="hero-title">
-            Everything You Need
+            Prepare Smarter.
             <br />
-            To Crack Placements.
+            Interview Better.
+            <br />
+            Get Hired.
           </h1>
 
           <p className="hero-description">

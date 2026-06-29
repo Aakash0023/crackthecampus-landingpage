@@ -8,9 +8,9 @@ function Features() {
         <span className="section-tag">FEATURES</span>
 
         <h2 className="section-title">
-          Everything You Need
+          Built Around
           <br />
-          To Crack Placements.
+          Your Preparation.
         </h2>
 
         <p className="section-description">
