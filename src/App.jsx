@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Features from "./components/Features/Features";
 import Stats from "./components/Stats/Stats";
-import Companies from "./components/Companies/Companies";
+import PlatformPreview from "./components/PlatformPreview/PlatformPreview";
 import Courses from "./components/Courses/Courses";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
@@ -13,8 +13,9 @@ function App() {
       <Navbar />
       <Hero />
       <Features />
+      <PlatformPreview />
       <Stats />
-      <Companies />
+
       <Courses />
       <Testimonials />
       <Footer />
