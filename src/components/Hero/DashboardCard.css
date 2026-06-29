@@ -1,0 +1,248 @@
+.dashboard-window {
+  width: 100%;
+  max-width: 620px;
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: transform 0.35s ease;
+}
+
+.dashboard-window:hover {
+  transform: translateY(-8px);
+}
+
+.window-header {
+  height: 58px;
+  padding: 0 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #151515;
+}
+
+.window-header p {
+  font-size: 0.9rem;
+  color: #d4d4d8;
+  font-weight: 500;
+}
+
+.window-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red {
+  background: #ff5f57;
+}
+
+.yellow {
+  background: #febc2e;
+}
+
+.green {
+  background: #28c840;
+}
+
+.window-body {
+  padding: 34px;
+}
+
+.dashboard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-label {
+  display: block;
+  color: #9ca3af;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.dashboard-top h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.status-chip {
+  background: #ffffff;
+  color: #000;
+  padding: 10px 18px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.progress-wrapper {
+  margin-top: 28px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #202020;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-value {
+  width: 92%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: inherit;
+}
+
+.dashboard-section {
+  margin-top: 36px;
+}
+
+.dashboard-section h4 {
+  margin-bottom: 18px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.task {
+  display: grid;
+  grid-template-columns: 18px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.task:last-child {
+  border-bottom: none;
+}
+
+.task span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #555;
+}
+
+.task.completed span {
+  background: #ffffff;
+}
+
+.task p {
+  color: #e5e7eb;
+}
+
+.task strong {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.activity-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #d1d5db;
+}
+
+.activity-row:last-child {
+  border-bottom: none;
+}
+
+.analytics-grid {
+  margin-top: 38px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.analytics-card {
+  padding: 24px;
+  background: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.analytics-card:hover {
+  background: #202020;
+}
+
+.analytics-card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.analytics-card p {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.graph-section {
+  margin-top: 40px;
+}
+
+.graph-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.graph-header h4 {
+  font-size: 1rem;
+}
+
+.graph-header span {
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+.graph {
+  height: 170px;
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.graph div {
+  flex: 1;
+  border-radius: 999px;
+  background: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0.35));
+}
+
+@media (max-width: 1024px) {
+  .dashboard-window {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .window-body {
+    padding: 24px;
+  }
+
+  .dashboard-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .graph {
+    height: 130px;
+  }
+}
