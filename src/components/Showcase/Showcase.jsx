@@ -1,8 +1,13 @@
+import { useState } from "react";
 import "./Showcase.css";
 
 function Showcase() {
+  const [activeTab, setActiveTab] = useState("Dashboard");
+
+  const menu = ["Dashboard", "Resume", "Coding", "Interview", "Analytics"];
+
   return (
-    <section id="showcase" className="showcase">
+    <section className="showcase" id="showcase">
       <div className="showcase-container">
         <span className="showcase-tag">PRODUCT</span>
 
@@ -13,137 +18,281 @@ function Showcase() {
         </h2>
 
         <p className="showcase-description">
-          CrackTheCampus combines resume building, coding practice, interview
-          preparation and analytics into one modern platform.
+          CrackTheCampus brings coding practice, resume building, interview
+          preparation and analytics together inside one modern workspace.
         </p>
 
-        <div className="showcase-block">
-          <div className="showcase-content">
-            <span className="showcase-label">AI Resume Review</span>
-
-            <h3>Improve your resume before recruiters see it.</h3>
-
-            <p>
-              Get AI-powered feedback, identify weak sections and improve your
-              chances with detailed recommendations.
-            </p>
-          </div>
-
-          <div className="resume-ui">
-            <div className="resume-header">
-              <span>Resume.pdf</span>
-
-              <strong>94</strong>
+        <div className="workspace-window">
+          <div className="workspace-header">
+            <div className="workspace-controls">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
 
-            <div className="resume-score">
-              <p>Skills</p>
+            <h4>CrackTheCampus Workspace</h4>
 
-              <div className="progress">
-                <div style={{ width: "92%" }}></div>
-              </div>
-            </div>
-
-            <div className="resume-score">
-              <p>Projects</p>
-
-              <div className="progress">
-                <div style={{ width: "84%" }}></div>
-              </div>
-            </div>
-
-            <div className="resume-score">
-              <p>Experience</p>
-
-              <div className="progress">
-                <div style={{ width: "76%" }}></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="showcase-block reverse">
-          <div className="code-ui">
-            <span>Today's Challenge</span>
-
-            <h3>Two Sum</h3>
-
-            <div className="code-meta">
-              <strong>Medium</strong>
-
-              <strong>45 min</strong>
-            </div>
+            <div className="workspace-user">A</div>
           </div>
 
-          <div className="showcase-content">
-            <span className="showcase-label">Coding Practice</span>
-
-            <h3>Practice company specific questions.</h3>
-
-            <p>
-              Solve curated coding questions with structured difficulty and
-              track your consistency.
-            </p>
-          </div>
-        </div>
-
-        <div className="showcase-block">
-          <div className="showcase-content">
-            <span className="showcase-label">Mock Interviews</span>
-
-            <h3>Interview with confidence.</h3>
-
-            <p>
-              Prepare with technical and HR interview simulations designed
-              around placement rounds.
-            </p>
-          </div>
-
-          <div className="meeting-ui">
-            <div className="meeting-top">
-              <div className="avatar"></div>
-
-              <div>
-                <h4>Technical Interview</h4>
-
-                <span>Interviewer Connected</span>
-              </div>
-            </div>
-
-            <button>Join Session</button>
-          </div>
-        </div>
-
-        <div className="showcase-block reverse">
-          <div className="analytics-ui">
-            <div className="analytics-top">
-              <div>
-                <span>Weekly Progress</span>
-
-                <h3>94%</h3>
+          <div className="workspace-body">
+            <aside className="workspace-sidebar">
+              <div className="sidebar-logo">
+                <h3>CTC</h3>
+                <span>Workspace</span>
               </div>
 
-              <strong>+12%</strong>
-            </div>
+              <nav className="sidebar-menu">
+                {menu.map((item) => (
+                  <button
+                    key={item}
+                    className={activeTab === item ? "active" : ""}
+                    onClick={() => setActiveTab(item)}
+                  >
+                    {item}
+                  </button>
+                ))}
+              </nav>
 
-            <div className="analytics-chart">
-              <div style={{ height: "35%" }}></div>
-              <div style={{ height: "48%" }}></div>
-              <div style={{ height: "62%" }}></div>
-              <div style={{ height: "80%" }}></div>
-              <div style={{ height: "100%" }}></div>
-            </div>
-          </div>
+              <div className="sidebar-footer">
+                <span>Today's Goal</span>
 
-          <div className="showcase-content">
-            <span className="showcase-label">Progress Analytics</span>
+                <h2>3 / 5</h2>
 
-            <h3>Understand your preparation.</h3>
+                <p>Tasks Completed</p>
 
-            <p>
-              Track your strengths, identify weak areas and monitor your
-              consistency every week.
-            </p>
+                <div className="goal-progress">
+                  <div></div>
+                </div>
+              </div>
+            </aside>
+
+            <main className="workspace-content">
+              {activeTab === "Dashboard" && (
+                <div className="dashboard-screen">
+                  <div className="screen-header">
+                    <div>
+                      <span>Welcome Back</span>
+
+                      <h2>Keep your streak alive.</h2>
+                    </div>
+
+                    <button>Continue</button>
+                  </div>
+
+                  <div className="stats-grid">
+                    <div className="stat-card">
+                      <h3>482</h3>
+
+                      <span>Problems Solved</span>
+                    </div>
+
+                    <div className="stat-card">
+                      <h3>94%</h3>
+
+                      <span>Accuracy</span>
+                    </div>
+
+                    <div className="stat-card">
+                      <h3>12</h3>
+
+                      <span>Day Streak</span>
+                    </div>
+
+                    <div className="stat-card">
+                      <h3>18</h3>
+
+                      <span>Mock Interviews</span>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeTab === "Resume" && (
+                <div className="resume-screen">
+                  <div className="screen-header">
+                    <div>
+                      <span>Resume Review</span>
+
+                      <h2>ATS Score Analysis</h2>
+                    </div>
+
+                    <button>Reanalyze</button>
+                  </div>
+
+                  <div className="resume-layout">
+                    <div className="resume-card">
+                      <div className="resume-top">
+                        <span>Resume.pdf</span>
+
+                        <strong>94</strong>
+                      </div>
+
+                      <div className="resume-item">
+                        <p>Skills</p>
+
+                        <div className="progress">
+                          <div style={{ width: "92%" }}></div>
+                        </div>
+                      </div>
+
+                      <div className="resume-item">
+                        <p>Projects</p>
+
+                        <div className="progress">
+                          <div style={{ width: "84%" }}></div>
+                        </div>
+                      </div>
+
+                      <div className="resume-item">
+                        <p>Experience</p>
+
+                        <div className="progress">
+                          <div style={{ width: "76%" }}></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="insights-card">
+                      <h3>Suggestions</h3>
+
+                      <ul>
+                        <li>Improve project descriptions</li>
+
+                        <li>Add measurable achievements</li>
+
+                        <li>Increase keyword density</li>
+
+                        <li>Strengthen professional summary</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeTab === "Coding" && (
+                <div className="coding-screen">
+                  <div className="screen-header">
+                    <div>
+                      <span>Today's Challenge</span>
+
+                      <h2>Two Sum</h2>
+                    </div>
+
+                    <button>Start</button>
+                  </div>
+
+                  <div className="editor-window">
+                    <div className="editor-header">
+                      <span>solution.py</span>
+                    </div>
+
+                    <pre>
+                      {`def twoSum(nums, target):
+    seen = {}
+
+    for i, num in enumerate(nums):
+
+        diff = target - num
+
+        if diff in seen:
+            return [seen[diff], i]
+
+        seen[num] = i`}
+                    </pre>
+                  </div>
+                </div>
+              )}
+
+              {activeTab === "Interview" && (
+                <div className="interview-screen">
+                  <div className="screen-header">
+                    <div>
+                      <span>Upcoming Session</span>
+
+                      <h2>Technical Interview</h2>
+                    </div>
+
+                    <button>Join</button>
+                  </div>
+
+                  <div className="meeting-card">
+                    <div className="meeting-avatar"></div>
+
+                    <div>
+                      <h3>Interviewer Connected</h3>
+
+                      <p>Starts in 12 minutes</p>
+                    </div>
+                  </div>
+
+                  <div className="meeting-stats">
+                    <div>
+                      <h3>91%</h3>
+
+                      <span>Readiness</span>
+                    </div>
+
+                    <div>
+                      <h3>18</h3>
+
+                      <span>Completed</span>
+                    </div>
+
+                    <div>
+                      <h3>4.9</h3>
+
+                      <span>Rating</span>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeTab === "Analytics" && (
+                <div className="analytics-screen">
+                  <div className="screen-header">
+                    <div>
+                      <span>Weekly Report</span>
+
+                      <h2>Performance Overview</h2>
+                    </div>
+                  </div>
+
+                  <div className="analytics-layout">
+                    <div className="chart-card">
+                      <div className="analytics-chart">
+                        <div style={{ height: "35%" }}></div>
+                        <div style={{ height: "50%" }}></div>
+                        <div style={{ height: "68%" }}></div>
+                        <div style={{ height: "60%" }}></div>
+                        <div style={{ height: "82%" }}></div>
+                        <div style={{ height: "100%" }}></div>
+                      </div>
+                    </div>
+
+                    <div className="analytics-stats">
+                      <div>
+                        <h3>482</h3>
+
+                        <span>Problems Solved</span>
+                      </div>
+
+                      <div>
+                        <h3>94%</h3>
+
+                        <span>Accuracy</span>
+                      </div>
+
+                      <div>
+                        <h3>12</h3>
+
+                        <span>Day Streak</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </main>
           </div>
         </div>
       </div>

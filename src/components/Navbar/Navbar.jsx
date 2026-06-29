@@ -19,9 +19,13 @@ function Navbar() {
   return (
     <header className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
       <div className="navbar-logo">
-        <div className="logo-box">CT</div>
+        <img
+          src="/logo.webp"
+          alt="CrackTheCampus Logo"
+          className="navbar-logo-img"
+        />
 
-        <span>CrackTheCampus</span>
+        
       </div>
 
       <nav className={menuOpen ? "nav-links active" : "nav-links"}>
