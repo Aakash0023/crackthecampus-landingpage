@@ -1,40 +1,75 @@
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import {
+  fadeUp,
+  fadeLeft,
+  fadeRight,
+  stagger,
+} from "../../animations/variants";
 import DashboardCard from "./DashboardCard";
 import "./Hero.css";
 
 function Hero() {
   return (
-    <section id="hero">
+    <section className="hero" id="hero">
       <div className="hero-gradient"></div>
 
       <div className="hero-container">
-        <div className="hero-content">
-          <span className="hero-badge">AI Powered Placement Platform</span>
+        <motion.div
+          className="hero-content"
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.span className="hero-badge" variants={fadeUp}>
+            AI Powered Placement Platform
+          </motion.span>
 
-          <h1 className="hero-title">
+          <motion.h1 className="hero-title" variants={fadeUp}>
             Prepare Smarter.
             <br />
             Interview Better.
             <br />
             Get Hired.
-          </h1>
+          </motion.h1>
 
-          <p className="hero-description">
+          <motion.p className="hero-description" variants={fadeUp}>
             Learn DSA, aptitude, mock interviews and resume building through one
             modern platform designed to help students prepare with confidence
             and land their dream job.
-          </p>
+          </motion.p>
 
-          <div className="hero-actions">
-            <button className="hero-primary-btn">
+          <motion.div className="hero-actions" variants={fadeUp}>
+            <button
+              className="hero-primary-btn"
+              onClick={() =>
+                window.open(
+                  "https://crackthecampus.com/",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            >
               Get Started
               <ArrowRight size={18} />
             </button>
 
-            <button className="hero-secondary-btn">Explore Courses</button>
-          </div>
+            <button
+              className="hero-secondary-btn"
+              onClick={() =>
+                window.open(
+                  "https://crackthecampus.com/explore",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            >
+              Explore Courses
+            </button>
+          </motion.div>
 
-          <div className="hero-metrics">
+          <motion.div className="hero-metrics" variants={fadeUp}>
             <div>
               <h3>15,000+</h3>
               <span>Students</span>
@@ -49,12 +84,18 @@ function Hero() {
               <h3>4.9★</h3>
               <span>Student Rating</span>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        <div className="hero-dashboard">
+        <motion.div
+          className="hero-dashboard"
+          variants={fadeRight}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <DashboardCard />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

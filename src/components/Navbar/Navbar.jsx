@@ -24,14 +24,12 @@ function Navbar() {
           alt="CrackTheCampus Logo"
           className="navbar-logo-img"
         />
-
-        
       </div>
 
       <nav className={menuOpen ? "nav-links active" : "nav-links"}>
         <a href="#hero">Home</a>
 
-        <a href="#features">Features</a>
+        <a href="#platform">Features</a>
 
         <a href="#courses">Courses</a>
 
@@ -40,7 +38,14 @@ function Navbar() {
         <a href="#testimonials">Testimonials</a>
       </nav>
 
-      <button className="navbar-button">Get Started</button>
+      <button
+        className="navbar-button"
+        onClick={() => {
+          window.location.href = "https://crackthecampus.com/";
+        }}
+      >
+        Get Started
+      </button>
 
       <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? <X size={22} /> : <Menu size={22} />}

@@ -1,0 +1,213 @@
+.companies {
+  padding: 160px 0;
+  background: #080808;
+  overflow: hidden;
+}
+
+.companies-container {
+  width: min(1400px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.companies-tag {
+  display: block;
+  text-align: center;
+  color: #8b8b92;
+  font-size: 0.85rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.companies-title {
+  max-width: 760px;
+  margin: 0 auto 22px;
+  text-align: center;
+  color: #ffffff;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.companies-description {
+  max-width: 620px;
+  margin: 0 auto 80px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  margin: 28px 0;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: max-content;
+  height: 110px;
+}
+
+.left {
+  animation: marqueeLeft 28s linear infinite;
+}
+
+.right {
+  animation: marqueeRight 28s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.company-card {
+  width: 190px;
+  height: 90px;
+
+  border-radius: 22px;
+
+  background: #111111;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition: 0.35s ease;
+
+  flex-shrink: 0;
+}
+
+.company-card img {
+  width: 95px;
+  height: 40px;
+
+  object-fit: contain;
+
+  filter: grayscale(100%) brightness(0) invert(0.75);
+
+  opacity: 0.65;
+
+  transition: 0.35s ease;
+
+  user-select: none;
+
+  pointer-events: none;
+}
+
+.company-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255, 255, 255, 0.14);
+
+  background: #181818;
+}
+
+.company-card:hover img {
+  filter: grayscale(0) brightness(1) invert(0);
+
+  opacity: 1;
+
+  transform: scale(1.08);
+}
+
+@keyframes marqueeLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .company-card {
+    width: 170px;
+    height: 80px;
+  }
+
+  .company-card img {
+    width: 85px;
+  }
+}
+
+@media (max-width: 768px) {
+  .companies {
+    padding: 110px 0;
+  }
+
+  .companies-container {
+    width: calc(100% - 32px);
+  }
+
+  .companies-title {
+    font-size: 2.3rem;
+  }
+
+  .companies-description {
+    font-size: 1rem;
+    margin-bottom: 60px;
+  }
+
+  .company-card {
+    width: 150px;
+    height: 72px;
+  }
+
+  .company-card img {
+    width: 72px;
+  }
+
+  .marquee-track {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .companies-title {
+    font-size: 2rem;
+  }
+
+  .company-card {
+    width: 130px;
+    height: 64px;
+  }
+
+  .company-card img {
+    width: 64px;
+  }
+}

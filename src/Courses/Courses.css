@@ -1,0 +1,102 @@
+import "./Courses.css";
+
+const courses = [
+  {
+    title: "DSA Mastery",
+    level: "Beginner → Advanced",
+    lessons: "120+ Problems",
+    description:
+      "Master data structures and algorithms with company-focused questions.",
+  },
+  {
+    title: "Aptitude",
+    level: "Placement Ready",
+    lessons: "250+ Questions",
+    description:
+      "Quantitative aptitude, logical reasoning and verbal preparation.",
+  },
+  {
+    title: "Resume Builder",
+    level: "AI Powered",
+    lessons: "ATS Analysis",
+    description:
+      "Build resumes with AI suggestions and improve your ATS score.",
+  },
+  {
+    title: "Mock Interviews",
+    level: "Technical + HR",
+    lessons: "50+ Sessions",
+    description:
+      "Practice interviews with instant AI feedback and reports.",
+  },
+  {
+    title: "System Design",
+    level: "Intermediate",
+    lessons: "30 Lessons",
+    description:
+      "Learn scalable systems and crack product company interviews.",
+  },
+  {
+    title: "Placement Roadmap",
+    level: "Complete Guide",
+    lessons: "12 Week Plan",
+    description:
+      "A structured roadmap covering coding, aptitude and interviews.",
+  },
+];
+
+function Courses() {
+  return (
+    <section className="courses" id="courses">
+
+      <div className="courses-container">
+
+        <span className="courses-tag">
+          COURSES
+        </span>
+
+        <h2 className="courses-title">
+          Learn Everything You Need To Crack Placements.
+        </h2>
+
+        <p className="courses-subtitle">
+          Structured learning paths designed to help students become placement ready.
+        </p>
+
+        <div className="courses-grid">
+
+          {courses.map((course, index) => (
+
+            <div className="course-card" key={index}>
+
+              <span className="course-level">
+                {course.level}
+              </span>
+
+              <h3>{course.title}</h3>
+
+              <p className="course-lessons">
+                {course.lessons}
+              </p>
+
+              <p className="course-description">
+                {course.description}
+              </p>
+
+              <button className="course-btn">
+                Explore
+              </button>
+
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+    </section>
+  );
+}
+
+export default Courses;

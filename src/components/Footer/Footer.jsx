@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 import { HiArrowUpRight } from "react-icons/hi2";
 
@@ -36,27 +36,15 @@ function Footer() {
             </div>
 
             <div>
-              <h4>Resources</h4>
-
-              <a href="#">Documentation</a>
-
-              <a href="#">Privacy Policy</a>
-
-              <a href="#">Terms of Service</a>
-
-              <a href="#">Support</a>
-            </div>
-
-            <div>
               <h4>Connect</h4>
 
               <a
-                href="https://github.com/yourusername"
+                href="https://www.instagram.com/crackthecampus_"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
-                <FaGithub size={18} />
-                GitHub
+                <FaInstagram />
+                Instagram
               </a>
 
               <a

@@ -5,7 +5,7 @@ const tabs = [
   {
     id: "dashboard",
     title: "Dashboard",
-    image: "/dashboard.jpg",
+    image: "/dashboard.png",
     badge: "Live Progress",
     heading: "Track your complete placement journey.",
     description:
@@ -18,7 +18,7 @@ const tabs = [
   {
     id: "resume",
     title: "Resume",
-    image: "/resume.jpg",
+    image: "/resume.png",
     badge: "AI Resume Review",
     heading: "Improve your ATS score instantly.",
     description:
@@ -31,7 +31,7 @@ const tabs = [
   {
     id: "analytics",
     title: "Analytics",
-    image: "/analytics.jpg",
+    image: "/analytics.png",
     badge: "Performance",
     heading: "Visualize your weekly growth.",
     description:
@@ -118,8 +118,6 @@ function PlatformPreview() {
               </div>
             </div>
           </div>
-
-          
         </div>
       </div>
     </section>

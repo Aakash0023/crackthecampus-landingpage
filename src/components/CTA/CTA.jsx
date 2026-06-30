@@ -21,13 +21,29 @@ function CTA() {
         </p>
 
         <div className="cta-buttons">
-          <button className="primary-btn">
+          <button
+            className="primary-btn"
+            onClick={() =>
+              window.open(
+                "https://crackthecampus.com/",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+          >
             Get Started
-            <ArrowRight size={18} />
           </button>
 
-          <button className="secondary-btn">
-            <Play size={18} />
+          <button
+            className="secondary-btn"
+            onClick={() =>
+              window.open(
+                "https://www.youtube.com/watch?v=v409dnE62IU",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+          >
             Watch Demo
           </button>
         </div>
