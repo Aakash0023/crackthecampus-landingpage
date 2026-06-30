@@ -1,16 +1,43 @@
-# React + Vite
+# CrackTheCampus
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+CrackTheCampus is a placement preparation platform built to help students prepare for campus recruitment through a single, easy-to-use interface. The landing page introduces the platform, its core features, available learning modules, and the overall placement preparation journey.
 
-Currently, two official plugins are available:
+The website is designed with a modern and responsive UI, providing a smooth browsing experience across desktops, tablets, and mobile devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Modern landing page with responsive design
+- Platform preview showcasing the dashboard experience
+- Placement preparation courses section
+- Company showcase with animated scrolling logos
+- Student testimonials
+- Call-to-action section with direct access to the platform
+- Smooth scrolling navigation
+- Interactive animations and hover effects
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## How It Works
 
-## Expanding the Oxlint configuration
+- Users land on the homepage and get an overview of the platform.
+- The Platform section provides a preview of the workspace and key features.
+- The Courses section highlights different placement preparation modules such as DSA, Aptitude, Resume Building, Mock Interviews, System Design, and Placement Roadmaps.
+- The Companies section showcases leading companies that students commonly prepare for.
+- Users can access the main CrackTheCampus platform directly using the **Get Started** button.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Tech Stack
+
+### Frontend
+
+- React
+- Vite
+- JavaScript (ES6+)
+- CSS3
+
+### Libraries
+
+- Framer Motion
+- Lucide React
+- React Icons
+
+## Author
+
+**Aakash B**
