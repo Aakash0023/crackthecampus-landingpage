@@ -306,3 +306,217 @@
     font-size: 1.5rem;
   }
 }
+.workspace-profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.sidebar-progress {
+  margin-top: auto;
+  padding: 20px;
+  border-radius: 18px;
+  background: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sidebar-progress span {
+  color: #9ca3af;
+  font-size: 0.8rem;
+}
+
+.sidebar-progress h3 {
+  margin: 10px 0 6px;
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.sidebar-progress p {
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+.progress-bar {
+  margin-top: 18px;
+  height: 8px;
+  border-radius: 999px;
+  background: #2b2b2b;
+  overflow: hidden;
+}
+
+.progress-bar div {
+  width: 60%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: inherit;
+}
+
+.workspace-overview {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.quick-card {
+  padding: 22px;
+  border-radius: 18px;
+  background: #151515;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: 0.3s ease;
+}
+
+.quick-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.quick-card h3 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.quick-card span {
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+.workspace-bottom {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.chart-section {
+  padding: 26px;
+  border-radius: 22px;
+  background: #151515;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.chart-header h4 {
+  color: #ffffff;
+  font-size: 1.05rem;
+}
+
+.chart-header span {
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+.progress-chart {
+  height: 180px;
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.progress-chart div {
+  flex: 1;
+  border-radius: 999px 999px 0 0;
+  background: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0.35));
+}
+
+.chart-days {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.chart-days span {
+  color: #9ca3af;
+  font-size: 0.8rem;
+}
+
+.activity-card {
+  padding: 26px;
+  border-radius: 22px;
+  background: #151515;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.activity-card h4 {
+  color: #ffffff;
+  margin-bottom: 22px;
+}
+
+.summary-item {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-item strong {
+  display: block;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.summary-item span {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.quick-card,
+.chart-section,
+.activity-card {
+  transition: 0.35s ease;
+}
+
+.quick-card:hover,
+.chart-section:hover,
+.activity-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 1100px) {
+  .workspace-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .workspace-bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .quick-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .progress-chart {
+    height: 140px;
+  }
+}

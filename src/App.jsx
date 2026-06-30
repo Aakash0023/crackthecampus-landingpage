@@ -6,7 +6,7 @@ import PlatformPreview from "./components/PlatformPreview/PlatformPreview";
 import Courses from "./components/Courses/Courses";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
-
+import CTA from "./components/CTA/CTA";
 function App() {
   return (
     <>
@@ -18,6 +18,7 @@ function App() {
 
       <Courses />
       <Testimonials />
+      <CTA />
       <Footer />
     </>
   );
