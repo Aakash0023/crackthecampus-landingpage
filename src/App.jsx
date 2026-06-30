@@ -18,8 +18,6 @@ function App() {
       <PlatformPreview />
       <Courses />
       <Stats />
-
-      <Courses />
       <Testimonials />
       <CTA />
       <Footer />

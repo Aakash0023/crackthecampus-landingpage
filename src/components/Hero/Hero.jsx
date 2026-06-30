@@ -54,16 +54,13 @@ function Hero() {
               Get Started
               <ArrowRight size={18} />
             </button>
-
             <button
               className="hero-secondary-btn"
-              onClick={() =>
-                window.open(
-                  "https://crackthecampus.com/explore",
-                  "_blank",
-                  "noopener,noreferrer"
-                )
-              }
+              onClick={() => {
+                document.getElementById("courses")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
             >
               Explore Courses
             </button>
